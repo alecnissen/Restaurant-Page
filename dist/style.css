@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+header { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    background-color: rgb(156, 18, 18);
+    color: white;
+    height: 15em; 
+    font-size: 2rem;
+} 
+
+body { 
+    background-color: rgb(156, 18, 18);
+}
+
+.btn-containers > button { 
+    margin: 60px; 
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+.main-content { 
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+
+.main-content > img { 
+    height: 50%;
+    width: 50%;
+    opacity: 0.25;
+}
+
+.main-content-text-field { 
+    position: absolute;
+    background-color: rgb(105, 98, 98);
+    /* color: yellow; */
+    color: white; 
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Kanit', sans-serif;
+    height: 100%;
+    width: 100%;
+} 
+
+
+.footer { 
+    /* background-color: rgb(156, 18, 18); */
+    height: 15em;
+
+}
+
+.contact-info-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-size: 1.5rem;
+}
+
+.contact-info-container > h3 { 
+    text-decoration: underline;
+}
