@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
-
+/* 
 header { 
     display: flex;
     flex-direction: column;
@@ -30,18 +30,17 @@ body {
     justify-content: center;
     /* align-items: center; */
     
-}
+/* } */
 
-.main-content > img { 
+/* .main-content > img { 
     height: 50%;
     width: 50%;
     opacity: 0.25;
-}
+} */
 
-.main-content-text-field { 
+/* .main-content-text-field { 
     position: absolute;
     background-color: rgb(105, 98, 98);
-    /* color: yellow; */
     color: white; 
     font-weight: bold;
     text-align: center;
@@ -49,16 +48,15 @@ body {
     font-family: 'Kanit', sans-serif;
     height: 100%;
     width: 100%;
-} 
+}  */
 
-
+/* 
 .footer { 
-    /* background-color: rgb(156, 18, 18); */
     height: 15em;
 
-}
+} */
 
-.contact-info-container { 
+/* .contact-info-container { 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,4 +67,4 @@ body {
 
 .contact-info-container > h3 { 
     text-decoration: underline;
-}
+}  */
