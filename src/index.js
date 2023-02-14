@@ -1,65 +1,19 @@
-// console.log('Hello');
-// console.log('Hey'); 
-
-// // function that will load the page, this module we can call it 
-// // by the name 
-// // I need to make a function which creates all HTML elements 
-// // USING THE DOM, I will put this code inside a module 
-// // the module will be called loadPage, it will contain 
-// const loadPage { 
-    // container to append elements, 
-    // // each part of the page should be its own method 
-    // header, main, footer, 
-    // first start with header, make an element, append, load, then go from there, 
-// } 
-
-// ok I can append elements to the DOM, now I need to write a function within a module 
-// now I need to write a function within a module /
-// make a module 
-
-// start with a function that only loads header, 
-// each section have its own module 
-
-// have to append items to the content div 
-
-// I want to put the buttons inside the div, 
+import './style.css';
 
 const loadPage = (() => { 
     
 let headerContent = () => { 
 
   // serves as container
-let contentDiv = document.getElementById('content');
+let contentDiv = document.getElementById('content'); 
 
-contentDiv.style.display = 'flex';
-
-contentDiv.style.flexDirection = 'column';
-
-// contentDiv.style.justifyContent = 'center';
-
-// contentDiv.style.alignItems = 'center';
+contentDiv.classList.add('header-container-styles');
 
 let header = document.createElement('div'); 
 
-// header.classList.add('header-content');
-
 header.textContent = "Alec's Burger House";
 
-header.style.fontSize = '3rem';
-
 header.classList.add('header-content');
-
-// header.style.display = 'flex';
-
-// header.style.justifyContent = 'flex-end';
-
-// header.style.alignItems = 'center';
-
-header.style.textAlign = 'center';
-
-header.style.height = '4em';
-
-header.style.backgroundColor = 'red';
 
 let headerBtnContainer = document.createElement('container'); 
 
@@ -77,25 +31,21 @@ headerBtnContainer.appendChild(contactBtn);
 
 headerBtnContainer.classList.add('header-btn-container');
 
-// headerBtnContainer.style.display = 'flex';
-
-// headerBtnContainer.style.flexDirection = 'row';
-
-// headerBtnContainer.style.justifyContent = 'center';
-
-// headerBtnContainer.style.alignItems = 'center';
-
 homeBtn.textContent = 'Home';
+
+homeBtn.classList.add('header-btn');
 
 menuBtn.textContent = 'Menu';
 
+menuBtn.classList.add('header-btn');
+
 contactBtn.textContent = 'Contact';
 
-// header.appendChild(headerBtnContainer);
-//
-contentDiv.appendChild(header);
+contactBtn.classList.add('header-btn');
 
 header.appendChild(headerBtnContainer);
+
+contentDiv.appendChild(header);
 
 document.body.appendChild(contentDiv); 
 } 

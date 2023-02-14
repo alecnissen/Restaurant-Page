@@ -87,5 +87,29 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 5rem;
+    text-align: center;
+    height: 4em;
+    background-color: red;
+    font-family: 'Kanit', sans-serif;
+ } 
+
+ .header-container-styles { 
+    display: flex;
+    flex-direction: column;
  }
 
+ .header-btn-container { 
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ .header-btn { 
+    width: 5em;
+    height: 3em;
+    color: white; 
+    background-color: black;
+    font-family: 'Kanit', sans-serif;
+ }
+
+ 
