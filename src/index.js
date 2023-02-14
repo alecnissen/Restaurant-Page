@@ -26,23 +26,34 @@
 
 const loadPage = (() => { 
     
-let header = () => { 
+let headerContent = () => { 
 
-let container = document.createElement('container'); 
+  // serves as container
+let contentDiv = document.getElementById('content');
 
-// container.style.display = 'flex';
+contentDiv.style.display = 'flex';
 
-// container.style.flexDirection = 'column';
+contentDiv.style.flexDirection = 'column';
 
-let header = document.createElement('div');
+// contentDiv.style.justifyContent = 'center';
+
+// contentDiv.style.alignItems = 'center';
+
+let header = document.createElement('div'); 
+
+// header.classList.add('header-content');
 
 header.textContent = "Alec's Burger House";
 
 header.style.fontSize = '3rem';
 
+header.classList.add('header-content');
+
 // header.style.display = 'flex';
 
-// header.style.flexDirection = 'row';
+// header.style.justifyContent = 'flex-end';
+
+// header.style.alignItems = 'center';
 
 header.style.textAlign = 'center';
 
@@ -64,11 +75,15 @@ headerBtnContainer.appendChild(menuBtn);
 
 headerBtnContainer.appendChild(contactBtn);
 
+headerBtnContainer.classList.add('header-btn-container');
+
 // headerBtnContainer.style.display = 'flex';
 
 // headerBtnContainer.style.flexDirection = 'row';
 
 // headerBtnContainer.style.justifyContent = 'center';
+
+// headerBtnContainer.style.alignItems = 'center';
 
 homeBtn.textContent = 'Home';
 
@@ -77,27 +92,21 @@ menuBtn.textContent = 'Menu';
 contactBtn.textContent = 'Contact';
 
 // header.appendChild(headerBtnContainer);
+//
+contentDiv.appendChild(header);
 
-container.appendChild(headerBtnContainer);
+header.appendChild(headerBtnContainer);
 
-container.appendChild(header);
-
-header.appendChild(homeBtn);
-
-header.appendChild(menuBtn);
-
-header.appendChild(contactBtn);
-
-document.body.appendChild(container); 
+document.body.appendChild(contentDiv); 
 } 
 
   return { 
-    header,
+    headerContent,
   }
 })(); 
 
 
-loadPage.header();
+loadPage.headerContent();
 
 // function loadPage() { 
 //     let container = document.createElement('container'); 
