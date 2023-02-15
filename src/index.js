@@ -1,6 +1,7 @@
 import '../style.css';
 import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
+import '../burger-img-4.jpg';
 
 const loadPage = (() => { 
     
@@ -17,7 +18,7 @@ let subheader = document.createElement('p');
 
 subheader.textContent = 'The Best In The City!'; 
 
-subheader.style.fontSize = '2.5rem';
+subheader.classList.add('subheader');
 
 header.textContent = "Alec's Burger House";
 
@@ -52,8 +53,8 @@ contactBtn.textContent = 'Contact';
 contactBtn.classList.add('header-btn');
 
 header.appendChild(subheader);
-header.appendChild(headerBtnContainer);
 
+header.appendChild(headerBtnContainer);
 
 contentDiv.appendChild(header);
 
@@ -88,8 +89,7 @@ let mainContent = () => {
   myImg3.style.width = '33.3%';
 
   myImg3.style.verticalAlign = 'top';
-  // myImg2.style.backgroundSize = '30%';
-
+  
   document.body.append(myImg1);
 
   document.body.append(myImg2);
@@ -105,11 +105,6 @@ let mainContent = () => {
 } 
 
 let footerContent = () => { 
-  // grab content div 
-  // container to hold text, 
-  // text with address and contact info included in footer 
-  // append to div then append that #contentdiv 
-  // let mainContentContainer = document.getElementById('content');
   
   let footerContainer = document.createElement('container');
 
@@ -123,17 +118,7 @@ let footerContent = () => {
 
   let footerPhoneNum = document.createElement('p');
 
-  // footerInfoDivAddress.style.backgroundColor = 'black';
-
-  // footerInfoDivAddress.style.height = '200px';
-
-  footerInfoDivAddress.textContent = 'Address: 1234 South Broad Street, Philadelphia, PA' 
-
-  // footerInfoDivAddress.style.color = 'white';
- 
-  // footerInfoDivAddress.style.textAlign = 'center';
-
-  // footerInfoDivAddress.style.lineBreak; 
+  footerInfoDivAddress.textContent = 'Address: 1234 South Broad Street, Philadelphia, PA';
 
   footerPhoneNum.textContent = 'Phone: 666-666-666';
 
@@ -143,17 +128,7 @@ let footerContent = () => {
 
   footerContainer.style.fontSize = '2rem';
 
-  
-
-  // footerContainer.append(footerPhoneNum);
-
   document.body.append(footerContainer);
-
-  // mainContentContainer.append(footerInfoDiv);
-
-  // document.body.append(mainContentContainer);
-
-
 
 }
 

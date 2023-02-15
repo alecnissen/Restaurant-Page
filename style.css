@@ -14,6 +14,7 @@ body {
     background-color: black;
     color: white; 
     font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
  } 
 
  .header-container-styles { 
@@ -33,6 +34,11 @@ body {
     background-color: white;
     font-family: 'Kanit', sans-serif;
     font-size: 1.3rem;
+ }
+
+ .subheader { 
+   font-size: 2.5rem;
+   font-weight: bolder;
  }
 
  /* .main-content-img { 
