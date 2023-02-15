@@ -1,4 +1,5 @@
 import '../style.css';
+import '../burger-picture-1.jpg';
 
 const loadPage = (() => { 
     
@@ -51,7 +52,15 @@ document.body.appendChild(contentDiv);
 } 
 
 let mainContent = () => { 
- let mainContentContainer = document.getElementById('content');
+ let mainContentContainer = document.getElementById('content'); 
+
+  const myImg = new Image();
+
+  myImg.src = '../burger-picture-1.jpg';
+
+  document.body.append(myImg);
+
+//  mainContentContainer.append(imgDiv);
   // insert an img here, 
   // make another div to append content, then append that content to 
   // main #contentdiv???
