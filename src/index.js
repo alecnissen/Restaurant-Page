@@ -1,4 +1,4 @@
-import './style.css';
+import '../style.css';
 
 const loadPage = (() => { 
     
@@ -50,13 +50,32 @@ contentDiv.appendChild(header);
 document.body.appendChild(contentDiv); 
 } 
 
+let mainContent = () => { 
+ let mainContentContainer = document.getElementById('content');
+  // insert an img here, 
+  // make another div to append content, then append that content to 
+  // main #contentdiv???
+  // append img to content container 
+  // place div with description text over top of background img
+} 
+
+let footerContent = () => { 
+  // grab content div 
+  // container to hold text, 
+  // text with address and contact info included in footer 
+  // append to div then append that #contentdiv 
+}
+
   return { 
     headerContent,
+    mainContent,
+    footerContent,
   }
 })(); 
 
 
 loadPage.headerContent();
+loadPage.mainContent();
 
 // function loadPage() { 
 //     let container = document.createElement('container'); 
