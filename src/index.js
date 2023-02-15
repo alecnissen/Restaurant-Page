@@ -13,6 +13,12 @@ contentDiv.classList.add('header-container-styles');
 
 let header = document.createElement('div'); 
 
+let subheader = document.createElement('p');
+
+subheader.textContent = 'The Best In The City!'; 
+
+subheader.style.fontSize = '2.5rem';
+
 header.textContent = "Alec's Burger House";
 
 header.classList.add('header-content');
@@ -45,7 +51,9 @@ contactBtn.textContent = 'Contact';
 
 contactBtn.classList.add('header-btn');
 
+header.appendChild(subheader);
 header.appendChild(headerBtnContainer);
+
 
 contentDiv.appendChild(header);
 
