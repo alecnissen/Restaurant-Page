@@ -1,5 +1,6 @@
 import '../style.css';
 import '../burger-picture-1.jpg';
+import '../burger-picture-2.jpg';
 
 const loadPage = (() => { 
     
@@ -54,11 +55,38 @@ document.body.appendChild(contentDiv);
 let mainContent = () => { 
  let mainContentContainer = document.getElementById('content'); 
 
-  const myImg = new Image();
+  const myImg1 = new Image();
 
-  myImg.src = '../burger-picture-1.jpg';
+  const myImg2 = new Image();
 
-  document.body.append(myImg);
+  const myImg3 = new Image();
+
+  myImg1.src = '../burger-fries-1-small.jpg';
+
+  myImg1.style.width = "33.3%";
+
+  myImg1.style.height = '100%';
+
+  myImg2.src = '../burger-picture-2.jpg';
+
+  myImg2.style.width = '33.3%';
+
+  myImg2.style.overflow = 'hidden';
+
+  myImg2.style.verticalAlign = 'top';
+
+  myImg3.src = '../burger-img-4.jpg';
+
+  myImg3.style.width = '33.3%';
+
+  myImg3.style.verticalAlign = 'top';
+  // myImg2.style.backgroundSize = '30%';
+
+  document.body.append(myImg1);
+
+  document.body.append(myImg2);
+
+  document.body.append(myImg3);
 
 //  mainContentContainer.append(imgDiv);
   // insert an img here, 
@@ -73,6 +101,52 @@ let footerContent = () => {
   // container to hold text, 
   // text with address and contact info included in footer 
   // append to div then append that #contentdiv 
+  // let mainContentContainer = document.getElementById('content');
+  
+  let footerContainer = document.createElement('container');
+
+  footerContainer.classList.add('footer-container');
+
+  let footerInfoDivAddress = document.createElement('div');
+
+  footerInfoDivAddress.classList.add('footer-info-styles');
+
+  let footerInfoDivPhone = document.createElement('div');
+
+  let footerPhoneNum = document.createElement('p');
+
+  // footerInfoDivAddress.style.backgroundColor = 'black';
+
+  // footerInfoDivAddress.style.height = '200px';
+
+  footerInfoDivAddress.textContent = 'Address: 1234 South Broad Street, Philadelphia, PA' 
+
+  // footerInfoDivAddress.style.color = 'white';
+ 
+  // footerInfoDivAddress.style.textAlign = 'center';
+
+  // footerInfoDivAddress.style.lineBreak; 
+
+  footerPhoneNum.textContent = 'Phone: 666-666-666';
+
+  footerInfoDivAddress.append(footerPhoneNum);
+
+  footerContainer.append(footerInfoDivAddress);
+
+  footerContainer.style.fontSize = '2rem';
+
+  
+
+  // footerContainer.append(footerPhoneNum);
+
+  document.body.append(footerContainer);
+
+  // mainContentContainer.append(footerInfoDiv);
+
+  // document.body.append(mainContentContainer);
+
+
+
 }
 
   return { 
@@ -85,6 +159,7 @@ let footerContent = () => {
 
 loadPage.headerContent();
 loadPage.mainContent();
+loadPage.footerContent();
 
 // function loadPage() { 
 //     let container = document.createElement('container'); 
