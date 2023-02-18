@@ -70,8 +70,6 @@ let mainContentTextContainer = document.createElement('container');
 
  let mainContentText = document.createElement('p');
 
-//  let lineBreak = document.createElement('br');
-
  mainContentText.classList.add('text-over-pictures');
 
  mainContentText.innerHTML = 'Experience the Tradiation! <br><br> Since 1994 we have been proudly serving the community. <br><br> Our mission is to make the best burgers and a memorable dining experience. <br><br> We honor our roots and tradition and cant wait to serve you!' ;
@@ -90,47 +88,17 @@ let mainContentTextContainer = document.createElement('container');
 
   myImg1.src = '../burger-fries-1-small.jpg';
 
-  myImg1.style.width = "33.3%";
-
-  myImg1.style.height = '100%';
-
-  myImg1.style.color = 'white';
-
-  myImg1.textContent = 'asdfasdfasdf';
-
   myImg2.src = '../burger-picture-2.jpg';
-
-  myImg2.style.width = '33.3%';
-
-  myImg2.style.overflow = 'hidden';
-
-  myImg2.style.verticalAlign = 'top';
 
   myImg3.src = '../burger-img-4.jpg';
 
-  myImg3.style.width = '33.3%';
-
-  myImg3.style.verticalAlign = 'top';
-
   mainContentTextContainer.append(mainContentText);
-
-  // mainContentTextContainer.append(mainContentSubtext);
   
   mainContentTextContainer.append(myImg1);
 
   mainContentTextContainer.append(myImg2);
 
   mainContentTextContainer.append(myImg3); 
-
-//  document.append(mainContentText);
-
-  // mainContentContainer.append(overContainer);
-  
-  // document.body.append(myImg1);
-
-  // document.body.append(myImg2);
-
-  // document.body.append(myImg3); 
 
   mainContentContainer.append(mainContentTextContainer);
 
@@ -160,8 +128,6 @@ let footerContent = () => {
 
   footerContainer.append(footerInfoDivAddress);
 
-  footerContainer.style.fontSize = '2rem';
-
   document.body.append(footerContainer);
 
 }
@@ -178,39 +144,41 @@ loadPage.headerContent();
 loadPage.mainContent();
 loadPage.footerContent();
 
-// function loadPage() { 
-//     let container = document.createElement('container'); 
+// clean up DOM styling into own css class/file 
 
-// let element = document.createElement('div');
+// then start making the menu page syntax logic, 
 
-// element.textContent = 'Alec/s house of burgers'
+// event listeners for each button, once clicked, call and run this function 
 
-// container.appendChild(element);
+// set up your restaurant site to use tabbed browsing to access the Contact and Menu pages.
 
-// document.body.appendChild(container); 
-// } 
+// Put the contents of each ‘tab’ inside of its own module. 
 
-// loadPage();
+// Each module will export a function that creates a div element, 
 
-// begin DOM content, 
-// let container = document.createElement('container'); 
+// adds the appropriate content and styles to that element and then appends it to the DOM.
 
-// let element = document.createElement('div');
+// grab the button element that was created, add an event listener to that button 
 
-// element.textContent = 'Alec/s house of burgers'
+// once clicked menu will be generated, use same background, 
 
-// container.appendChild(element);
+// content div with id, container which will append text/content
 
-// document.body.appendChild(container); 
+// container, give it a width, height, make it rectangle, slight border radius 
 
-// document.append(container);
+// apply flex properties to container, 
 
-// console.log(container);
+// main content will be p element, or multiple p elements, 
 
-// function loadPage () { 
-//     let container = document.createElement('container');
-//     let element = document.createElement('div');
+// those elements will be appended to the container, then append that to the content div
 
-// } 
 
-// loadPage();
+
+
+
+
+// contact btn event listener, click, make content div w ID, 
+
+// make container which will append content, including address, phone, 
+
+// map which 

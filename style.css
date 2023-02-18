@@ -41,12 +41,9 @@ body {
    font-weight: bolder;
  }
 
- /* .main-content-img { 
-   background-image: url('../burger-picture-1.jpg');
- } */
-
 .footer-container { 
    font-family: 'Kanit', sans-serif;
+   font-size: 2rem;
 
 } 
 
@@ -57,18 +54,6 @@ body {
    text-align: center;
 } 
 
-/* .main-content-center-text-container { 
-   position: relative;
-} */
-
-/* .text-over-pictures { 
-   color: pink; 
-   position: absolute;
-   /* text-align: center;
-   left: 45em;
-   bottom: 45em;  
-   font-size: 50px; */
-/* } */ 
 
 .main-content-center-text-container { 
    position: relative;
@@ -76,8 +61,6 @@ body {
    justify-content: space-around;
    align-items: center;
    border: 5px solid black;
-
-   /* background-color: white; */
 }
 
 .text-over-pictures { 
@@ -117,39 +100,11 @@ body {
    backdrop-filter: blur(30em);
 }
 
-
-/* 
-.main-content-text { 
-   color: black;
-   /* position:static; */
-   /* left: 250em; 
-   bottom: 30em; */
-   
-/* }   */
+.main-content-background-img-1, 
+.main-content-background-img-2, 
+.main-content-background-img-3 { 
+   width: 33.3%;
+}
 
 
-/* .over-container { 
-   height: 100px; 
-   width: 100px;
-   background-color: pink;
-} */
 
-/* .main-content-container-styles { 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-} */
-
-/* .main-content-container-styles { 
-   display: flex;
-   flex-direction: row;
-} */
-
-
-/* .img-1-styles { 
-   color: white;
-} */
-
-/* .main-content-center-text-container { 
-   
-} */
