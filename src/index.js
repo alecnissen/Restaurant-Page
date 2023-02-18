@@ -3,7 +3,7 @@ import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg';
 
-const loadPage = (() => { 
+export const loadPage = (() => { 
     
 let headerContent = () => { 
 
@@ -51,6 +51,8 @@ menuBtn.classList.add('header-btn');
 contactBtn.textContent = 'Contact';
 
 contactBtn.classList.add('header-btn');
+
+console.log(homeBtn);
 
 header.appendChild(subheader);
 
@@ -142,7 +144,9 @@ let footerContent = () => {
 
 loadPage.headerContent();
 loadPage.mainContent();
-loadPage.footerContent();
+loadPage.footerContent(); 
+
+// event listener when the menu button is pressed, 
 
 // clean up DOM styling into own css class/file 
 
@@ -182,3 +186,5 @@ loadPage.footerContent();
 // make container which will append content, including address, phone, 
 
 // map which 
+
+

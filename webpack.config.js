@@ -19,4 +19,8 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    allowedHosts: ['.preview.csb.app', 'localhost'],
+    static: './dist',
+}
 };
