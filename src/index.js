@@ -62,7 +62,19 @@ document.body.appendChild(contentDiv);
 } 
 
 let mainContent = () => { 
- let mainContentContainer = document.getElementById('content'); 
+let mainContentContainer = document.getElementById('content'); 
+
+let mainContentTextContainer = document.createElement('container'); 
+
+ mainContentTextContainer.classList.add('main-content-center-text-container');
+
+ let mainContentText = document.createElement('p');
+
+//  let lineBreak = document.createElement('br');
+
+ mainContentText.classList.add('text-over-pictures');
+
+ mainContentText.innerHTML = 'Experience the Tradiation! <br><br> Since 1994 we have been proudly serving the community. <br><br> Our mission is to make the best burgers and a memorable dining experience. <br><br> We honor our roots and tradition and cant wait to serve you!' ;
 
   const myImg1 = new Image();
 
@@ -70,11 +82,21 @@ let mainContent = () => {
 
   const myImg3 = new Image();
 
+  myImg1.classList.add('main-content-background-img-1'); 
+
+  myImg2.classList.add('main-content-background-img-2');
+
+  myImg3.classList.add('main-content-background-img-3');
+
   myImg1.src = '../burger-fries-1-small.jpg';
 
   myImg1.style.width = "33.3%";
 
   myImg1.style.height = '100%';
+
+  myImg1.style.color = 'white';
+
+  myImg1.textContent = 'asdfasdfasdf';
 
   myImg2.src = '../burger-picture-2.jpg';
 
@@ -89,19 +111,31 @@ let mainContent = () => {
   myImg3.style.width = '33.3%';
 
   myImg3.style.verticalAlign = 'top';
+
+  mainContentTextContainer.append(mainContentText);
+
+  // mainContentTextContainer.append(mainContentSubtext);
   
-  document.body.append(myImg1);
+  mainContentTextContainer.append(myImg1);
 
-  document.body.append(myImg2);
+  mainContentTextContainer.append(myImg2);
 
-  document.body.append(myImg3);
+  mainContentTextContainer.append(myImg3); 
 
-//  mainContentContainer.append(imgDiv);
-  // insert an img here, 
-  // make another div to append content, then append that content to 
-  // main #contentdiv???
-  // append img to content container 
-  // place div with description text over top of background img
+//  document.append(mainContentText);
+
+  // mainContentContainer.append(overContainer);
+  
+  // document.body.append(myImg1);
+
+  // document.body.append(myImg2);
+
+  // document.body.append(myImg3); 
+
+  mainContentContainer.append(mainContentTextContainer);
+
+  document.body.append(mainContentContainer);
+
 } 
 
 let footerContent = () => { 
