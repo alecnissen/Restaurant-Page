@@ -1,7 +1,14 @@
 import '../style.css';
 import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
-import '../burger-img-4.jpg';
+import '../burger-img-4.jpg'; 
+
+// global variable, which holds the result of which button was clicked on 
+// if that particular button was clicked, update var 
+// then call the module/import the module that handles the code 
+// for the button. 
+
+let moduleVariable 
 
 export const loadPage = (() => { 
     
@@ -26,11 +33,26 @@ header.classList.add('header-content');
 
 let headerBtnContainer = document.createElement('container'); 
 
-let homeBtn = document.createElement('button');
+let homeBtn = document.createElement('button'); 
+
+homeBtn.addEventListener('click', (e) => {
+   moduleVariable = loadPage.headerContent();
+})
+
+// add event listener to home btn,
+// once clicked, set the module variable equal to the button that was clicked 
+// if home btn is clicked, mod variable === home module 
 
 let menuBtn = document.createElement('button');
 
+// add event listener, once clicked,
+// set the module variable to the button that was clicked, 
+// import the correct file/module that was clicked into index.js 
+
 let contactBtn = document.createElement('button');
+
+// add event listener, once clicked,
+// set the module variable to the button that was clicked, 
 
 headerBtnContainer.appendChild(homeBtn);
 
@@ -110,9 +132,11 @@ let mainContentTextContainer = document.createElement('container');
 
 let footerContent = () => { 
   
-  let footerContainer = document.createElement('container');
+  // let footerContainer = document.createElement('container'); 
 
-  footerContainer.classList.add('footer-container');
+  let mainDivContainer = document.getElementById('content');
+
+  // footerContainer.classList.add('footer-container');
 
   let footerInfoDivAddress = document.createElement('div');
 
@@ -126,11 +150,16 @@ let footerContent = () => {
 
   footerPhoneNum.textContent = 'Phone: 666-666-666';
 
+  
+  // footerContainer.append(footerInfoDivAddress);
+
   footerInfoDivAddress.append(footerPhoneNum);
 
-  footerContainer.append(footerInfoDivAddress);
+  // mainDivContainer.append(footerPhoneNum);
+  
+  mainDivContainer.append(footerInfoDivAddress);
 
-  document.body.append(footerContainer);
+  // document.body.append(mainDivContainer);
 
 }
 
