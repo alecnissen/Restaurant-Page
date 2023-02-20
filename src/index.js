@@ -16,36 +16,6 @@ import '../src/contact';
 
 let moduleVariable 
 
-// function determinePage () { 
-//   if (moduleVariable === 'home') {
-//     // remove all styles, 
-//     headerContent.header();
-//     headerContent.mainContent();
-//     headerContent.footerContent();
-
-// } else if (moduleVariable === 'menu') {
-//   // menu module 
-//   // headerContent.header();  // render header 
-//   // headerContent.mainContent.remove(); // removing styles from main content, 
-//   // call '../src/menu' to run it's module
-//   // headerContent.footerContent();  // render footer 
-
-// } else if (moduleVariable === 'contact') { 
-//   // remove all previous styles, 
-//   // headerContent.header(); // render header, 
-//   // headerContent.mainContent.remove()  // remove main content 
-//   // call '../src/contact' to run its module // render with new module
-// } else { 
-//   // just print homepage styles 
-//   // remove previous styles 
-//   headerContent.header();
-//   headerContent.mainContent();
-//   headerContent.footerContent();
-// }
-// }
-
-// determinePage();
-
 
 const headerContent = (() => {  
 let header = () => { 
@@ -53,7 +23,7 @@ let header = () => {
   // serves as container
 let contentDiv = document.getElementById('content'); 
 
-contentDiv.classList.add('header-container-styles');
+// contentDiv.classList.add('header-container-styles');
 
 let header = document.createElement('div'); 
 
@@ -71,7 +41,7 @@ let headerBtnContainer = document.createElement('container');
 
 let homeBtn = document.createElement('button'); 
 
-homeBtn.addEventListener('click', (e) => {
+homeBtn.addEventListener('click', () => {
    moduleVariable = 'home';
    determinePage();
    return 
@@ -87,7 +57,7 @@ let menuBtn = document.createElement('button');
 // set the module variable to the button that was clicked, 
 // import the correct file/module that was clicked into index.js 
 
-menuBtn.addEventListener('click', (e) => { 
+menuBtn.addEventListener('click', () => { 
   moduleVariable = 'menu';
   determinePage();
   return
@@ -98,7 +68,7 @@ let contactBtn = document.createElement('button');
 // add event listener, once clicked,
 // set the module variable to the button that was clicked, 
 
-contactBtn.addEventListener('click', (e) => { 
+contactBtn.addEventListener('click', () => { 
   moduleVariable = 'contact';
   determinePage();
   return
@@ -130,7 +100,7 @@ header.appendChild(headerBtnContainer);
 
 contentDiv.appendChild(header);
 
-document.body.appendChild(contentDiv); 
+// document.body.appendChild(contentDiv); 
 } 
 return { 
   header,
@@ -140,7 +110,8 @@ return {
 
 
 export const loadPage = (() => { 
-    
+  // old header content, header within its own module 
+
 // let headerContent = () => { 
 
 //   // serves as container
@@ -253,7 +224,7 @@ let mainContentTextContainer = document.createElement('container');
 
   mainContentContainer.append(mainContentTextContainer);
 
-  document.body.append(mainContentContainer);
+  // document.body.append(mainContentContainer);
 
 } 
 
@@ -299,37 +270,46 @@ let footerContent = () => {
 
 
 // loadPage.headerContent();
-loadPage.mainContent();
-loadPage.footerContent();  
+// loadPage.mainContent();
+// loadPage.footerContent();  
 
+// at this point, I want to test that 
+// if I click on any of the buttons, it will render appropriately 
+// at least render the header and footer, and everything for home page 
+
+// it is appending everything on the bottom of the page, below the footer, 
+// not sure why, it has be an issue with how I'm appending. 
+// I just want that during my testing, if I click on the buttons, it will 
+// render the header, and the footer, remove the main content as well, at once. 
+// right now it's still appending the header below the footer, it's not 
+// re-appending to the container, 
+// the main content container, 
 
 function determinePage () { 
-  if (moduleVariable === 'home') {
-    // remove all styles, 
-    headerContent.header();
-    headerContent.mainContent();
-    headerContent.footerContent();
+  let mainContentDiv = document.getElementById('content');
 
-} else if (moduleVariable === 'menu') {
+  if (moduleVariable === 'home') {
+    
+    headerContent.header();
+    loadPage.mainContent();
+    loadPage.footerContent(); 
+
+} else if (moduleVariable === 'menu') { 
   // menu module 
-  // headerContent.header();  // render header 
-  // headerContent.mainContent.remove(); // removing styles from main content, 
-  // call '../src/menu' to run it's module
-  // headerContent.footerContent();  // render footer 
+   headerContent.header();  // render header 
+   loadPage.footerContent();  // render footer 
 
 } else if (moduleVariable === 'contact') { 
-  // remove all previous styles, 
-  // headerContent.header(); // render header, 
-  // headerContent.mainContent.remove()  // remove main content 
+   headerContent.header(); 
+   loadPage.footerContent();
   // call '../src/contact' to run its module // render with new module
 } else { 
-  // just print homepage styles 
-  // remove previous styles 
   headerContent.header();
-  headerContent.mainContent();
-  headerContent.footerContent();
+  loadPage.mainContent();
+  loadPage.footerContent();
 }
 }
+
 
 determinePage();
 
