@@ -1,33 +1,37 @@
 
 
-export default menuPage = () => { 
-    let menuPageContentDiv = document.createElement('div');
+// export default menuPage = () => { 
+//     let menuPageContentDiv = document.createElement('div');
     
-    menuPageContentDiv.classList.add('menu-page-content-div-container');
+//     menuPageContentDiv.classList.add('menu-page-content-div-container');
 
-} 
+// }  
 
-// hello, I am stuck on last step of restaurant page with switching tabs 
-// right now I'm trying to develop a game-plan and pseudocode before diving deep 
+// when button is clicked, remove the main content, 
+// remove styles 
+// keep header content and footer content, 
+// make menu container, apply styles to container, rectangle shape 
+// make div or multiple divs, add content, append to container. 
 
-// So I understand each tab/page will be it's module, home, menu, contact 
+// const menuPageModule = (() => { 
+//     // remove main content styles to make way for new menu 
+//     const menuPage = () => { 
+//         let menuPageContainer = document.createElement('container');
 
-// The code in each module will create a div, then append content that div 
+//         let menuPageContentDiv = document.createElement('div');
 
-// right now I'm confused on the logic of switching tabs 
+//         menuPageContentDiv.textContent = 'Menu:';
 
-// I realize I will probably need event listeners on each btn 
+//         menuPageContentDiv.classList.add('menu-page-content-div-container'); 
 
-// once button is clicked, erase previous DOM data
+//         document.body.append(menuPageContentDiv);
 
-// however keep header and buttons so user can still navigate, 
+//         // call the header function within first module, to print the header, 
 
-// import header elements into that file? 
+//         // each function is creating a new div,
+//         // I think you want a container, apply the background styles, 
+//         // then append the menu items to the div, then attach the div to the container 
 
-// if my buttons are being dynamically generated using the DOM, 
+//     }
 
-// how can I access them if they are inside a module, 
-
-// should they be written inside HTML, 
-
-// very confused on logic to switch tabs 
+// }())

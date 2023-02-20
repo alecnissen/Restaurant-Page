@@ -3,16 +3,52 @@ import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
 
+import '../src/menu';
+import '../src/contact';
+
 // global variable, which holds the result of which button was clicked on 
 // if that particular button was clicked, update var 
 // then call the module/import the module that handles the code 
 // for the button. 
 
+// header module seperate 
+
+
 let moduleVariable 
 
-export const loadPage = (() => { 
-    
-let headerContent = () => { 
+// function determinePage () { 
+//   if (moduleVariable === 'home') {
+//     // remove all styles, 
+//     headerContent.header();
+//     headerContent.mainContent();
+//     headerContent.footerContent();
+
+// } else if (moduleVariable === 'menu') {
+//   // menu module 
+//   // headerContent.header();  // render header 
+//   // headerContent.mainContent.remove(); // removing styles from main content, 
+//   // call '../src/menu' to run it's module
+//   // headerContent.footerContent();  // render footer 
+
+// } else if (moduleVariable === 'contact') { 
+//   // remove all previous styles, 
+//   // headerContent.header(); // render header, 
+//   // headerContent.mainContent.remove()  // remove main content 
+//   // call '../src/contact' to run its module // render with new module
+// } else { 
+//   // just print homepage styles 
+//   // remove previous styles 
+//   headerContent.header();
+//   headerContent.mainContent();
+//   headerContent.footerContent();
+// }
+// }
+
+// determinePage();
+
+
+const headerContent = (() => {  
+let header = () => { 
 
   // serves as container
 let contentDiv = document.getElementById('content'); 
@@ -36,7 +72,9 @@ let headerBtnContainer = document.createElement('container');
 let homeBtn = document.createElement('button'); 
 
 homeBtn.addEventListener('click', (e) => {
-   moduleVariable = loadPage.headerContent();
+   moduleVariable = 'home';
+   determinePage();
+   return 
 })
 
 // add event listener to home btn,
@@ -49,10 +87,22 @@ let menuBtn = document.createElement('button');
 // set the module variable to the button that was clicked, 
 // import the correct file/module that was clicked into index.js 
 
+menuBtn.addEventListener('click', (e) => { 
+  moduleVariable = 'menu';
+  determinePage();
+  return
+})
+
 let contactBtn = document.createElement('button');
 
 // add event listener, once clicked,
 // set the module variable to the button that was clicked, 
+
+contactBtn.addEventListener('click', (e) => { 
+  moduleVariable = 'contact';
+  determinePage();
+  return
+})
 
 headerBtnContainer.appendChild(homeBtn);
 
@@ -74,8 +124,6 @@ contactBtn.textContent = 'Contact';
 
 contactBtn.classList.add('header-btn');
 
-console.log(homeBtn);
-
 header.appendChild(subheader);
 
 header.appendChild(headerBtnContainer);
@@ -84,6 +132,85 @@ contentDiv.appendChild(header);
 
 document.body.appendChild(contentDiv); 
 } 
+return { 
+  header,
+}
+})(); 
+
+
+
+export const loadPage = (() => { 
+    
+// let headerContent = () => { 
+
+//   // serves as container
+// let contentDiv = document.getElementById('content'); 
+
+// contentDiv.classList.add('header-container-styles');
+
+// let header = document.createElement('div'); 
+
+// let subheader = document.createElement('p');
+
+// subheader.textContent = 'The Best In The City!'; 
+
+// subheader.classList.add('subheader');
+
+// header.textContent = "Alec's Burger House";
+
+// header.classList.add('header-content');
+
+// let headerBtnContainer = document.createElement('container'); 
+
+// let homeBtn = document.createElement('button'); 
+
+// homeBtn.addEventListener('click', (e) => {
+//    moduleVariable = loadPage.headerContent();
+// })
+
+// // add event listener to home btn,
+// // once clicked, set the module variable equal to the button that was clicked 
+// // if home btn is clicked, mod variable === home module 
+
+// let menuBtn = document.createElement('button');
+
+// // add event listener, once clicked,
+// // set the module variable to the button that was clicked, 
+// // import the correct file/module that was clicked into index.js 
+
+// let contactBtn = document.createElement('button');
+
+// // add event listener, once clicked,
+// // set the module variable to the button that was clicked, 
+
+// headerBtnContainer.appendChild(homeBtn);
+
+// headerBtnContainer.appendChild(menuBtn);
+
+// headerBtnContainer.appendChild(contactBtn);
+
+// headerBtnContainer.classList.add('header-btn-container');
+
+// homeBtn.textContent = 'Home';
+
+// homeBtn.classList.add('header-btn');
+
+// menuBtn.textContent = 'Menu';
+
+// menuBtn.classList.add('header-btn');
+
+// contactBtn.textContent = 'Contact';
+
+// contactBtn.classList.add('header-btn');
+
+// header.appendChild(subheader);
+
+// header.appendChild(headerBtnContainer);
+
+// contentDiv.appendChild(header);
+
+// document.body.appendChild(contentDiv); 
+// } 
 
 let mainContent = () => { 
 let mainContentContainer = document.getElementById('content'); 
@@ -164,16 +291,47 @@ let footerContent = () => {
 }
 
   return { 
-    headerContent,
+    // headerContent,
     mainContent,
     footerContent,
   }
 })(); 
 
 
-loadPage.headerContent();
+// loadPage.headerContent();
 loadPage.mainContent();
-loadPage.footerContent(); 
+loadPage.footerContent();  
+
+
+function determinePage () { 
+  if (moduleVariable === 'home') {
+    // remove all styles, 
+    headerContent.header();
+    headerContent.mainContent();
+    headerContent.footerContent();
+
+} else if (moduleVariable === 'menu') {
+  // menu module 
+  // headerContent.header();  // render header 
+  // headerContent.mainContent.remove(); // removing styles from main content, 
+  // call '../src/menu' to run it's module
+  // headerContent.footerContent();  // render footer 
+
+} else if (moduleVariable === 'contact') { 
+  // remove all previous styles, 
+  // headerContent.header(); // render header, 
+  // headerContent.mainContent.remove()  // remove main content 
+  // call '../src/contact' to run its module // render with new module
+} else { 
+  // just print homepage styles 
+  // remove previous styles 
+  headerContent.header();
+  headerContent.mainContent();
+  headerContent.footerContent();
+}
+}
+
+determinePage();
 
 // event listener when the menu button is pressed, 
 
