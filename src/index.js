@@ -2,10 +2,10 @@ import '../style.css';
 import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
+import { menuPageModule } from './menu';
 
-import '../src/menu';
-import '../src/contact';
-
+export { mainContent } from './index';
+ 
 // global variable, which holds the result of which button was clicked on 
 // if that particular button was clicked, update var 
 // then call the module/import the module that handles the code 
@@ -100,7 +100,7 @@ header.appendChild(headerBtnContainer);
 
 contentDiv.appendChild(header);
 
-// document.body.appendChild(contentDiv); 
+document.body.appendChild(contentDiv); 
 } 
 return { 
   header,
@@ -224,7 +224,7 @@ let mainContentTextContainer = document.createElement('container');
 
   mainContentContainer.append(mainContentTextContainer);
 
-  // document.body.append(mainContentContainer);
+  document.body.append(mainContentContainer);
 
 } 
 
@@ -257,7 +257,7 @@ let footerContent = () => {
   
   mainDivContainer.append(footerInfoDivAddress);
 
-  // document.body.append(mainDivContainer);
+  document.body.append(mainDivContainer);
 
 }
 
@@ -302,12 +302,13 @@ function determinePage () {
 } else if (moduleVariable === 'menu') { 
   // menu module 
    headerContent.header();  // render header 
+  //  menuPageModule; trying to call menu module, so code can run and fill in. 
+   // call the menu page, run code inside 
   //  loadPage.mainContent.remove();
    loadPage.footerContent();  // render footer 
 
 } else if (moduleVariable === 'contact') { 
    headerContent.header(); 
-   let div = document.createElement('div');
   //  div.textContent = 'Hellllllooooo!';
   //  div.style.color = 'white';
   //  document.body.append(div);
