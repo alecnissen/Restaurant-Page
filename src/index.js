@@ -288,9 +288,13 @@ let footerContent = () => {
 function determinePage () { 
   let mainContentDiv = document.getElementById('content');
 
+  while(mainContentDiv.firstChild) { 
+    mainContentDiv.firstChild.remove();
+  }
+
   if (moduleVariable === 'home') {
     // you have to delete previous styles in the content div. 
-    // mainContentDiv.style.remove();
+    // mainContentDiv.style.remove(); 
     headerContent.header();
     loadPage.mainContent();
     loadPage.footerContent(); 
@@ -303,6 +307,10 @@ function determinePage () {
 
 } else if (moduleVariable === 'contact') { 
    headerContent.header(); 
+   let div = document.createElement('div');
+  //  div.textContent = 'Hellllllooooo!';
+  //  div.style.color = 'white';
+  //  document.body.append(div);
    loadPage.footerContent();
   // call '../src/contact' to run its module // render with new module
 } else { 
