@@ -246,7 +246,7 @@ let footerContent = () => {
 
   footerInfoDivAddress.textContent = 'Address: 1234 South Broad Street, Philadelphia, PA';
 
-  footerPhoneNum.textContent = 'Phone: 666-666-666';
+  footerPhoneNum.textContent = 'Phone: 123-123-123';
 
   
   // footerContainer.append(footerInfoDivAddress);
@@ -289,7 +289,8 @@ function determinePage () {
   let mainContentDiv = document.getElementById('content');
 
   if (moduleVariable === 'home') {
-    
+    // you have to delete previous styles in the content div. 
+    // mainContentDiv.style.remove();
     headerContent.header();
     loadPage.mainContent();
     loadPage.footerContent(); 
@@ -297,6 +298,7 @@ function determinePage () {
 } else if (moduleVariable === 'menu') { 
   // menu module 
    headerContent.header();  // render header 
+  //  loadPage.mainContent.remove();
    loadPage.footerContent();  // render footer 
 
 } else if (moduleVariable === 'contact') { 
