@@ -3,11 +3,11 @@ import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
 
-import  menuPageModule from './menu'; 
+import  { menuPageModule } from './menu'; 
 
 // export default loadPage from './index';
 
-// export { mainContent } from './index';
+// export { loadPage, mainContent } from './index';
  
 // global variable, which holds the result of which button was clicked on 
 // if that particular button was clicked, update var 
@@ -112,7 +112,7 @@ return {
 
 
 
- export default const loadPage = (() => { 
+ export const loadPage = (() => { 
   // old header content, header within its own module 
 
 // let headerContent = () => { 

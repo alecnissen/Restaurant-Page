@@ -1,14 +1,14 @@
-import  loadPage from './index';
+import { loadPage, mainContent } from './index';
 
 console.log(mainContent);
 
-export default const menuPageModule = () => { 
+export const menuPageModule = () => { 
     const menuPage = () => { 
        let div = document.createElement('div');
        div.textContent = 'Helllllloo';
        div.style.color = 'white'; 
 
-    mainContentTextContainer.append(div);
+       mainContentTextContainer.append(div);
 
        document.body.append(mainContentTextContainer);
     }
