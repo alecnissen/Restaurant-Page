@@ -1,29 +1,15 @@
-import { mainContent } from './index';
+import  loadPage from './index';
 
+console.log(mainContent);
 
-// import '../src/index';
-// export default menuPage = () => { 
-//     let menuPageContentDiv = document.createElement('div');
-    
-//     menuPageContentDiv.classList.add('menu-page-content-div-container');
-
-// }  
-
-// when button is clicked, remove the main content, 
-// remove styles 
-// keep header content and footer content, 
-// make menu container, apply styles to container, rectangle shape 
-// make div or multiple divs, add content, append to container. 
-
-
-
-export const menuPageModule = () => { 
+export default const menuPageModule = () => { 
     const menuPage = () => { 
        let div = document.createElement('div');
        div.textContent = 'Helllllloo';
        div.style.color = 'white'; 
 
-       mainContentTextContainer.append(div);
+    mainContentTextContainer.append(div);
+
        document.body.append(mainContentTextContainer);
     }
 }

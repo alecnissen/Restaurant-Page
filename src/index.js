@@ -2,9 +2,12 @@ import '../style.css';
 import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
-import { menuPageModule } from './menu';
 
-export { mainContent } from './index';
+import  menuPageModule from './menu'; 
+
+// export default loadPage from './index';
+
+// export { mainContent } from './index';
  
 // global variable, which holds the result of which button was clicked on 
 // if that particular button was clicked, update var 
@@ -109,7 +112,7 @@ return {
 
 
 
-export const loadPage = (() => { 
+ export default const loadPage = (() => { 
   // old header content, header within its own module 
 
 // let headerContent = () => { 
@@ -302,7 +305,8 @@ function determinePage () {
 } else if (moduleVariable === 'menu') { 
   // menu module 
    headerContent.header();  // render header 
-  //  menuPageModule; trying to call menu module, so code can run and fill in. 
+  //  menuPageModule; trying to call menu module, so code can run and fill in.
+  menuPageModule.menuPage();
    // call the menu page, run code inside 
   //  loadPage.mainContent.remove();
    loadPage.footerContent();  // render footer 
