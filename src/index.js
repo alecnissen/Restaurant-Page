@@ -3,20 +3,6 @@ import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
 
-import  { menuPageModule } from './menu'; 
-
-// export default loadPage from './index';
-
-// export { loadPage, mainContent } from './index';
- 
-// global variable, which holds the result of which button was clicked on 
-// if that particular button was clicked, update var 
-// then call the module/import the module that handles the code 
-// for the button. 
-
-// header module seperate 
-
-
 let moduleVariable 
 
 
@@ -113,80 +99,8 @@ return {
 
 
  export const loadPage = (() => { 
-  // old header content, header within its own module 
 
-// let headerContent = () => { 
-
-//   // serves as container
-// let contentDiv = document.getElementById('content'); 
-
-// contentDiv.classList.add('header-container-styles');
-
-// let header = document.createElement('div'); 
-
-// let subheader = document.createElement('p');
-
-// subheader.textContent = 'The Best In The City!'; 
-
-// subheader.classList.add('subheader');
-
-// header.textContent = "Alec's Burger House";
-
-// header.classList.add('header-content');
-
-// let headerBtnContainer = document.createElement('container'); 
-
-// let homeBtn = document.createElement('button'); 
-
-// homeBtn.addEventListener('click', (e) => {
-//    moduleVariable = loadPage.headerContent();
-// })
-
-// // add event listener to home btn,
-// // once clicked, set the module variable equal to the button that was clicked 
-// // if home btn is clicked, mod variable === home module 
-
-// let menuBtn = document.createElement('button');
-
-// // add event listener, once clicked,
-// // set the module variable to the button that was clicked, 
-// // import the correct file/module that was clicked into index.js 
-
-// let contactBtn = document.createElement('button');
-
-// // add event listener, once clicked,
-// // set the module variable to the button that was clicked, 
-
-// headerBtnContainer.appendChild(homeBtn);
-
-// headerBtnContainer.appendChild(menuBtn);
-
-// headerBtnContainer.appendChild(contactBtn);
-
-// headerBtnContainer.classList.add('header-btn-container');
-
-// homeBtn.textContent = 'Home';
-
-// homeBtn.classList.add('header-btn');
-
-// menuBtn.textContent = 'Menu';
-
-// menuBtn.classList.add('header-btn');
-
-// contactBtn.textContent = 'Contact';
-
-// contactBtn.classList.add('header-btn');
-
-// header.appendChild(subheader);
-
-// header.appendChild(headerBtnContainer);
-
-// contentDiv.appendChild(header);
-
-// document.body.appendChild(contentDiv); 
-// } 
-
-let mainContent = () => { 
+ let mainContent = () => { 
 let mainContentContainer = document.getElementById('content'); 
 
 let mainContentTextContainer = document.createElement('container'); 
@@ -231,19 +145,13 @@ let mainContentTextContainer = document.createElement('container');
 
 } 
 
-let footerContent = () => { 
-  
-  // let footerContainer = document.createElement('container'); 
+let footerContent = () => {  
 
   let mainDivContainer = document.getElementById('content');
-
-  // footerContainer.classList.add('footer-container');
 
   let footerInfoDivAddress = document.createElement('div');
 
   footerInfoDivAddress.classList.add('footer-info-styles');
-
-  let footerInfoDivPhone = document.createElement('div');
 
   let footerPhoneNum = document.createElement('p');
 
@@ -251,12 +159,7 @@ let footerContent = () => {
 
   footerPhoneNum.textContent = 'Phone: 123-123-123';
 
-  
-  // footerContainer.append(footerInfoDivAddress);
-
   footerInfoDivAddress.append(footerPhoneNum);
-
-  // mainDivContainer.append(footerPhoneNum);
   
   mainDivContainer.append(footerInfoDivAddress);
 
@@ -276,18 +179,6 @@ let footerContent = () => {
 // loadPage.mainContent();
 // loadPage.footerContent();  
 
-// at this point, I want to test that 
-// if I click on any of the buttons, it will render appropriately 
-// at least render the header and footer, and everything for home page 
-
-// it is appending everything on the bottom of the page, below the footer, 
-// not sure why, it has be an issue with how I'm appending. 
-// I just want that during my testing, if I click on the buttons, it will 
-// render the header, and the footer, remove the main content as well, at once. 
-// right now it's still appending the header below the footer, it's not 
-// re-appending to the container, 
-// the main content container, 
-
 function determinePage () { 
   let mainContentDiv = document.getElementById('content');
 
@@ -305,19 +196,11 @@ function determinePage () {
 } else if (moduleVariable === 'menu') { 
   // menu module 
    headerContent.header();  // render header 
-  //  menuPageModule; trying to call menu module, so code can run and fill in.
-  menuPageModule.menuPage();
-   // call the menu page, run code inside 
-  //  loadPage.mainContent.remove();
    loadPage.footerContent();  // render footer 
 
 } else if (moduleVariable === 'contact') { 
    headerContent.header(); 
-  //  div.textContent = 'Hellllllooooo!';
-  //  div.style.color = 'white';
-  //  document.body.append(div);
    loadPage.footerContent();
-  // call '../src/contact' to run its module // render with new module
 } else { 
   headerContent.header();
   loadPage.mainContent();
@@ -326,7 +209,21 @@ function determinePage () {
 }
 
 
-determinePage();
+determinePage(); 
+
+
+import { menuPageModule } from './menu'; 
+
+menuPageModule();
+
+
+
+
+
+
+
+
+
 
 // event listener when the menu button is pressed, 
 
