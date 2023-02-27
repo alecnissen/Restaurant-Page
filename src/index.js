@@ -1,4 +1,7 @@
-import '../style.css';
+// previous project begins here 
+
+
+import './style.css';
 import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
@@ -98,14 +101,14 @@ return {
 }
 })(); 
 
-
+headerContent.header();
 
  export const loadPage = (() => { 
 
  let mainContent = () => { 
 let mainContentContainer = document.getElementById('content'); 
 
-let mainContentTextContainer = document.createElement('container'); 
+let mainContentTextContainer = document.createElement('div'); 
 
  mainContentTextContainer.classList.add('main-content-center-text-container');
 
@@ -178,42 +181,38 @@ let footerContent = () => {
 
 
 // loadPage.headerContent();
-// loadPage.mainContent();
-// loadPage.footerContent();  
+loadPage.mainContent();
+loadPage.footerContent();  
 
-function determinePage () { 
-  // let mainContentDiv = document.getElementById('content');
+// let mainContentTextContainer = document.querySelector(".main-content-center-text-container");
 
-  // while(mainContentDiv.firstChild) { 
-  //   mainContentDiv.firstChild.remove();
-  // }
+// function determinePage () { 
+//   // let mainContentDiv = document.getElementById('content');
 
-  if (moduleVariable === 'home') {
-    // you have to delete previous styles in the content div. 
-    // mainContentDiv.style.remove(); 
-    headerContent.header();
-    loadPage.mainContent();
-    loadPage.footerContent(); 
+//   if (moduleVariable === 'home') {
 
-} else if (moduleVariable === 'menu') { 
-  // menu module 
-   headerContent.header();  // render header 
-  //  loadPage.mainContent.mainContentTextContainer.remove();
-   menuPageModule();
-   loadPage.footerContent();  // render footer 
+//     headerContent.header();
+//     loadPage.mainContent();
+//     loadPage.footerContent(); 
+//   }
 
-} else if (moduleVariable === 'contact') { 
-   headerContent.header(); 
-   loadPage.footerContent();
-} else { 
-  headerContent.header();
-  loadPage.mainContent();
-  loadPage.footerContent();
-}
-}
+//   else if (moduleVariable === 'menu') { 
+//   // menu module 
+//   headerContent.header();  // render header 
+//   // mainContentTextContainer.remove();
+//   // menuPageModule();
+//   loadPage.footerContent();  // render footer 
+// } else if (moduleVariable === 'contact') { 
+//    headerContent.header(); 
+//    loadPage.footerContent();
+// } else { 
+//   headerContent.header();
+//   loadPage.mainContent();
+//   loadPage.footerContent();
+// }
+// }
 
-
-determinePage(); 
+// determinePage(); 
 
 
 
@@ -221,52 +220,8 @@ determinePage();
 
 
 
+// previous project ends here 
 
 
-
-
-
-
-
-// event listener when the menu button is pressed, 
-
-// clean up DOM styling into own css class/file 
-
-// then start making the menu page syntax logic, 
-
-// event listeners for each button, once clicked, call and run this function 
-
-// set up your restaurant site to use tabbed browsing to access the Contact and Menu pages.
-
-// Put the contents of each ‘tab’ inside of its own module. 
-
-// Each module will export a function that creates a div element, 
-
-// adds the appropriate content and styles to that element and then appends it to the DOM.
-
-// grab the button element that was created, add an event listener to that button 
-
-// once clicked menu will be generated, use same background, 
-
-// content div with id, container which will append text/content
-
-// container, give it a width, height, make it rectangle, slight border radius 
-
-// apply flex properties to container, 
-
-// main content will be p element, or multiple p elements, 
-
-// those elements will be appended to the container, then append that to the content div
-
-
-
-
-
-
-// contact btn event listener, click, make content div w ID, 
-
-// make container which will append content, including address, phone, 
-
-// map which 
 
 
