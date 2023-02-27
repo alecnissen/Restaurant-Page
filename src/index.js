@@ -3,6 +3,8 @@ import '../burger-picture-1.jpg';
 import '../burger-picture-2.jpg';
 import '../burger-img-4.jpg'; 
 
+import { menuPageModule } from './menu'; 
+
 let moduleVariable 
 
 
@@ -180,11 +182,11 @@ let footerContent = () => {
 // loadPage.footerContent();  
 
 function determinePage () { 
-  let mainContentDiv = document.getElementById('content');
+  // let mainContentDiv = document.getElementById('content');
 
-  while(mainContentDiv.firstChild) { 
-    mainContentDiv.firstChild.remove();
-  }
+  // while(mainContentDiv.firstChild) { 
+  //   mainContentDiv.firstChild.remove();
+  // }
 
   if (moduleVariable === 'home') {
     // you have to delete previous styles in the content div. 
@@ -196,6 +198,8 @@ function determinePage () {
 } else if (moduleVariable === 'menu') { 
   // menu module 
    headerContent.header();  // render header 
+  //  loadPage.mainContent.mainContentTextContainer.remove();
+   menuPageModule();
    loadPage.footerContent();  // render footer 
 
 } else if (moduleVariable === 'contact') { 
@@ -212,9 +216,8 @@ function determinePage () {
 determinePage(); 
 
 
-import { menuPageModule } from './menu'; 
 
-menuPageModule();
+// menuPageModule();
 
 
 
