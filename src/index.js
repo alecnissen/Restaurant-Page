@@ -1,7 +1,20 @@
+// begin append elements to the content div 
+
+// make a seperate file, called initialPageLoad.js 
+
+// inside there, create the header content, append all content to the content div 
+
+// overall we want 3 divs for each section, 
+
+// header div, mainContent div, footerDiv 
+
+// all those will be appended to the content div 
+
+// inital page load module, 
 
 
-
-
+// let contentContainer = document.getElementById('content');
+// console.log(contentContainer);
 
 
 
